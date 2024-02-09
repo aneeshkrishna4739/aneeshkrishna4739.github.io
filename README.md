@@ -1,11 +1,11 @@
 # Data Scientist
 
-###Education
+### Education
 abc, abc
 
 ### Work Experience
 abc,abc
 
-###Projects
+### Projects
 -abc
 abc
