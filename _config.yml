@@ -1,1 +1,5 @@
-
+title: Aneesh Krishna
+#logo: /assets/img/headshot_circle.png
+#description: data science portfolio
+show_downloads: false
+theme: jekyll-theme-minimal
