@@ -1,2 +1,11 @@
-# aneeshkrishna4739.github.io
-aneeshkrishna4739/portfolio
+# Data Scientist
+
+###Education
+abc, abc
+
+### Work Experience
+abc,abc
+
+###Projects
+-abc
+abc
