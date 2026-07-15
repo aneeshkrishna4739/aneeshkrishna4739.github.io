@@ -1,361 +1,502 @@
-<!DOCTYPE HTML>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Aneesh Krishna</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aneesh Krishna — PhD Student, Scientific Machine Learning</title>
+  <meta name="description"
+    content="Aneesh Krishna is a PhD student in Computational and Data-Enabled Sciences at the University at Buffalo, working on Bayesian optimization and Gaussian-process surrogates for calibrating biological simulations." />
+  <meta name="author" content="Aneesh Krishna" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://aneeshkrishna4739.github.io/" />
+  <meta name="theme-color" content="#fcfbf9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#16161a" media="(prefers-color-scheme: dark)" />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aneeshkrishna4739.github.io/" />
+  <meta property="og:title" content="Aneesh Krishna — PhD Student, Scientific Machine Learning" />
+  <meta property="og:description"
+    content="PhD student at the University at Buffalo working on Bayesian optimization and Gaussian-process surrogates for calibrating biological simulations." />
+  <meta property="og:image" content="https://aneeshkrishna4739.github.io/assets/img/portrait.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Set theme before paint to avoid flash -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="is-preload">
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+  <!-- ===== Icon sprite ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+      stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+      <path d="m3 6 9 6.5L21 6" />
+    </symbol>
+    <symbol id="i-scholar" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.84 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.16 4.44L24 9.5 12 0z" />
+    </symbol>
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.12-.31-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.18.77.84 1.24 1.92 1.24 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5Z" />
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z" />
+    </symbol>
+    <symbol id="i-orcid" viewBox="0 0 256 256">
+      <path fill="#A6CE39"
+        d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z" />
+      <g fill="#fff">
+        <path d="M86.3 186.2H70.9V79.1h15.4v107.1z" />
+        <path
+          d="M108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7 0-21.5-13.7-39.7-43.7-39.7h-23.7v79.4z" />
+        <path d="M88.7 56.8c0 5.5-4.5 10.1-10.1 10.1S68.5 62.3 68.5 56.8c0-5.6 4.5-10.1 10.1-10.1s10.1 4.6 10.1 10.1z" />
+      </g>
+    </symbol>
+    <symbol id="i-cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z" />
+      <path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h7M8.5 9h2" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" />
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 17 17 7M8 7h9v9" />
+    </symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </symbol>
+  </svg>
 
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="logo">Aneesh Krishna</a>
-		</header>
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top"><span class="brand-mark">AK</span><span class="brand-name">Aneesh Krishna</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a class="nav-cv" href="assets/docs/Aneesh_Krishna_CV.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+      <div class="header-tools">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon" /></svg>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="assets/docs/Aneesh_Krishna_CV.pdf" target="_blank" rel="noopener">Curriculum Vitae ↗</a>
+    </nav>
+  </header>
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li class="active"><a href="index.html">Profile</a></li>
-				<li><a href="database.html">Database</a></li>
-				<li><a href="data_analysis.html">Data Analysis</a></li>
-				<li><a href="ml.html">Machine Learning</a></li>
-				<li><a href="llm.html">Large Language Models</a></li>
-				<li><a href="dl.html">Deep Learning</a></li>
-			</ul>
-		</nav>
+  <main>
+    <!-- ===== Hero / About ===== -->
+    <section class="hero" id="about">
+      <div class="wrap hero-grid reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">PhD Student · Computational &amp; Data-Enabled Sciences</p>
+          <h1 class="hero-name">Aneesh Krishna</h1>
+          <p class="hero-affil">
+            I'm a PhD student at the <a href="https://www.buffalo.edu/" target="_blank" rel="noopener">University at
+              Buffalo</a> (SUNY), advised by Prof. <a href="https://engineering.buffalo.edu/chemical-biological/people/faculty-directory/core.host.html/content/shared/engineering/chemical-biological/profiles/faculty/ford-versypt-ashlee.html"
+              target="_blank" rel="noopener">Ashlee&nbsp;N.&nbsp;Ford&nbsp;Versypt</a> in the Systems Biomedicine &amp;
+            Pharmaceutics Lab.
+          </p>
+          <div class="hero-bio">
+            <p>
+              My research is in <strong>scientific machine learning</strong>. I build Bayesian-optimization and
+              Gaussian-process surrogate methods that calibrate expensive, stochastic biological simulations — right now,
+              teaching agent-based models of collective cancer-cell invasion to reproduce real microscopy data in far
+              fewer simulator runs than brute-force search.
+            </p>
+            <p>
+              Before my PhD I worked on NLP-based intrusion detection for advanced-persistent-threat and ransomware
+              behavior, and built LLM- and RAG-powered systems in industry. I completed my MS in Data Science at UB in
+              2024.
+            </p>
+          </div>
 
-		<!-- Main -->
-		<div id="main">
+          <ul class="interests" aria-label="Research interests">
+            <li>Bayesian Optimization</li>
+            <li>Gaussian Processes</li>
+            <li>Agent-Based Modeling</li>
+            <li>Simulation-Based Calibration</li>
+            <li>Scientific ML</li>
+            <li>Computational Biology</li>
+          </ul>
 
-			<!-- Profile Section -->
-			<section class="post">
-				<header class="major">
-					<h1>Aneesh Krishna</h1>
-					<p>+1(716) 303 1623 | <a href="mailto:aneeshkr@buffalo.edu">aneeshkr@buffalo.edu</a></p>
-					<p>
-						<a href="https://www.linkedin.com/in/aneesh-krishna" target="_blank"><i
-								class="fab fa-linkedin fa-2x icon-linkedin"></i></a> |
-						<a href="https://github.com/aneeshkrishna4739" target="_blank"><i
-								class="fab fa-github fa-2x icon-github"></i></a> |
-						<a href="https://medium.com/@aneeshkrishna4739" target="_blank"><i
-								class="fab fa-medium fa-2x icon-medium"></i></a> |
-						<a href="https://public.tableau.com/app/profile/aneesh.krishna8620/vizzes" target="_blank"><i
-								class="fas fa-chart-bar fa-2x icon-tableau"></i></a>
-					</p>
-					<div>
-						<a href="mailto:aneeshkr@buffalo.edu" class="button" target="_blank">Hire Me</a>
-						<a href="assets/Resume.pdf" class="button" download target="_blank">Resume</a>
-					</div>
-				</header>
+          <div class="contact-row">
+            <a href="mailto:aneeshkrishna4739@gmail.com" aria-label="Email">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg><span>Email</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=PJ4z8S0AAAAJ&hl=en" target="_blank" rel="noopener"
+              aria-label="Google Scholar">
+              <svg class="icon" aria-hidden="true"><use href="#i-scholar" /></svg><span>Scholar</span>
+            </a>
+            <a href="https://github.com/aneeshkrishna4739" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg><span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/aneesh-krishna" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg><span>LinkedIn</span>
+            </a>
+            <a href="https://orcid.org/0009-0002-3882-1501" target="_blank" rel="noopener" aria-label="ORCID">
+              <svg class="icon" aria-hidden="true"><use href="#i-orcid" /></svg><span>ORCID</span>
+            </a>
+            <a href="assets/docs/Aneesh_Krishna_CV.pdf" target="_blank" rel="noopener" aria-label="Curriculum Vitae">
+              <svg class="icon" aria-hidden="true"><use href="#i-cv" /></svg><span>CV</span>
+            </a>
+          </div>
+        </div>
 
-				<h2 class="h2_profile">Experience</h2>
-				<section id="education">
-					<div class="experience-item">
-						<div class="experience-image">
-							<img src="images/advance2000_logo.jpeg" alt="Advance2000" width="60" height="80">
-						</div>
-						<div class="experience-content">
-							<div class="experience-left"><strong>Data Science Fellow</strong>Advance2000</div>
-							<div class="experience-right">
-								<p><em>August 2024 - Present</em></p>
-								<p>Remote</p>
-							</div>
-							
-						</div>
-						<ul class="experience-list">
-							<li>Increased helpdesk ticket resolution speed by 30% by building a RAG- and LLM-powered assistant that analyzes past solutions to suggest relevant responses for new tickets.</li>
-							<li>Enhanced model accuracy by 10% through advanced prompt engineering, including chain-of-thought, few-shot prompting, and metadata filtering, optimizing ticket solution relevance.</li>
-							<li>Reduced helpdesk response time by 25% by implementing an LLM system using Hugging Face embeddings, Pinecone vector databases, and Llama 3.1 through Groq for real-time ticket analysis.</li>
-							<li>Elevated solution quality and team efficiency by collaborating with testing and SDE teams, resulting in a 250% increase in helpdesk ticket resolution speed from 2 to 7 tickets per minute.</li>
-							<li>Processed solutions for 42,000 open tickets, achieving 98% completion rate within a day by implementing a custom rate-limiting algorithm and parallel processing, optimizing for API token usage and operational efficiency.</li>
-						</ul>
-					</div>
+        <div class="hero-photo">
+          <img src="assets/img/portrait.jpg" width="731" height="1300"
+            alt="Aneesh Krishna standing on a city street at sunset" />
+        </div>
+      </div>
+    </section>
 
-					<div class="experience-item">
-						<div class="experience-image">
-							<img src="images/suny_logo.png" alt="University at Buffalo" width="60" height="60">
-						</div>
-						<div class="experience-content">
-							<div class="experience-left"><strong>Graduate Research Assistant</strong>University at
-								Buffalo</div>
-							<div class="experience-right">
-								<p><em>August 2024 - Present</em></p>
-								<p>Buffalo, NY</p>
-							</div>
+    <!-- ===== News ===== -->
+    <section class="section" id="news">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-label">Recent</p>
+          <h2>News</h2>
+        </div>
+        <ul class="news-list reveal">
+          <li>
+            <span class="news-date">Jul 2026</span>
+            <span class="news-body">Presented our collective cell-invasion calibration work as a poster at the
+              <a href="https://meetings.siam.org/sess/dsp_talk.cfm?p=158086" target="_blank" rel="noopener">SIAM
+                Conference on the Life Sciences (LS26)</a> in Cleveland, OH.</span>
+          </li>
+          <li>
+            <span class="news-date">Jul 2026</span>
+            <span class="news-body">The same work was presented as a poster at <strong>FOPAM 2026</strong> (Foundations
+              of Process/Product Analytics and Machine Learning), Decatur, GA.</span>
+          </li>
+          <li>
+            <span class="news-date">Feb 2026</span>
+            <span class="news-body">Gave a lightning talk on AI-driven calibration of cell-invasion models at a
+              University at Buffalo CDSE student research session.</span>
+          </li>
+          <li>
+            <span class="news-date">Jan 2026</span>
+            <span class="news-body">Started my PhD in Computational and Data-Enabled Sciences at the
+              <strong>University at Buffalo</strong>.</span>
+          </li>
+          <li>
+            <span class="news-date">Jun 2025</span>
+            <span class="news-body">Presented at the 20th Annual <a href="https://www.albany.edu/iasymposium"
+                target="_blank" rel="noopener">Symposium on Information Assurance</a> (NYS Cybersecurity Conference),
+              Albany, NY.</span>
+          </li>
+          <li>
+            <span class="news-date">Dec 2024</span>
+            <span class="news-body">Completed my MS in Data Science at the University at Buffalo.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-						</div>
-						<ul class="experience-list">
-							<li>Enhanced AI-driven cybersecurity threat detection through the integration of BERT and GloVe models, achieving 99.98% accuracy and a 1.0 F1 score in context-aware interpretation of network traffic patterns and log anomalies.</li>
-							<li>Boosted attack vector classification accuracy by 20% using packet analysis across all 7 OSI layers, extracting advanced features from log sequences for real-time threat detection.</li>
-							<li>Achieved 98.55% accuracy in anomaly detection using a Naive Bayes model with TF-IDF Vectorizer, optimizing feature extraction and classification for system log analysis and network security.</li>
-						</ul>
-					</div>
+    <!-- ===== Research ===== -->
+    <section class="section alt" id="research">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-label">What I work on</p>
+          <h2>Research</h2>
+          <p class="section-intro">I work at the intersection of machine learning and mechanistic simulation — using
+            surrogate models and Bayesian methods to make expensive scientific simulators tractable to calibrate, and
+            bringing that same data-driven rigor to security and applied-AI systems.</p>
+        </div>
 
-					<div class="experience-item">
-						<div class="experience-image">
-							<img src="images/infosys_logo.png" alt="Infosys Ltd" width="60" height="60">
-						</div>
-						<div class="experience-content">
-							<div class="experience-left"><strong>Senior System Engineer</strong>Infosys Ltd</div>
-							<div class="experience-right">
-								<p><em>October 2020 - April 2023</em></p>
-								<p>Mysore, India</p>
-							</div>
-						</div>
-						<ul class="experience-list">
-							<li>Developed SPFX (SharePoint Framework Extension) to replace outdated web-parts,
-								reducing
-								loading time by 30% and delivering effective solutions for enhanced performance.
-							</li>
-							<li>Monitored migration of 10 million+ files and metadata from 67 sites operating the
-								Microsoft ShareGate tool to latest site, meeting the expectations of stakeholders.
-							</li>
-							<li>Introduced a Proof of Concept to demonstrate the use of SPFX in SharePoint Online
-								sites
-								for replacing outdated features of old SharePoint sites no longer in use.</li>
-							<li>Collaborated on a data migration project for a Fortune-50 client, moving 90+ sites
-								from
-								Microsoft SharePoint 2010 to the new SharePoint Online version in a streamlined
-								pipeline.</li>
-							<li>Spearheaded a team of five to redesign legacy sites using Angular, resulting in a
-								60%
-								performance improvement and enhanced user interface in Agile Scrum environment.</li>
-							<li>Developed PowerBI reports as well as dashboards to articulate the migration details
-								with
-								stakeholders, aiding in strategic planning of project phases.</li>
-						</ul>
-					</div>
-				</section>
+        <article class="feature reveal">
+          <div class="feature-media">
+            <img src="assets/img/presentation.jpg" width="1600" height="1067"
+              alt="Aneesh presenting the cell-invasion calibration project on a large screen" />
+          </div>
+          <div class="feature-body">
+            <span class="tag tag-current">Current focus</span>
+            <h3>Calibrating agent-based models of collective cancer-cell invasion</h3>
+            <p>
+              Collective cancer cells invade tissue as either compact <em>spheroids</em> or branching
+              <em>networks</em>, and agent-based models (in CompuCell3D) can simulate both — but only when their
+              parameters (cell–cell adhesion, chemoattractant secretion rate, chemotactic strength) are tuned correctly.
+              Manual tuning is slow, subjective, and computationally expensive.
+            </p>
+            <p>
+              I built a constrained Bayesian-optimization framework with multi-output Gaussian-process surrogates and a
+              feasibility-aware acquisition function — Expected Improvement combined with probability of feasibility —
+              that calibrates these models against experimental microscopy data. It recovers parameter sets that
+              reproduce both invasive (network) and non-invasive (spheroid) phenotypes, with uncertainty-aware estimates
+              and far fewer simulator evaluations than grid or Monte-Carlo search.
+            </p>
+            <div class="chips">
+              <span>Bayesian Optimization</span><span>Gaussian Processes</span><span>CompuCell3D</span><span>Agent-Based
+                Modeling</span>
+            </div>
+            <div class="feature-links">
+              <a class="link-arrow" href="assets/docs/SIAM_LS26_poster.pdf" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-cv" /></svg> Poster (PDF)
+              </a>
+              <a class="link-arrow" href="https://meetings.siam.org/sess/dsp_talk.cfm?p=158086" target="_blank"
+                rel="noopener">
+                SIAM LS26 <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+              </a>
+            </div>
+          </div>
+        </article>
 
+        <article class="feature feature-textonly reveal">
+          <div class="feature-body">
+            <span class="tag">Previous</span>
+            <h3>NLP-based detection of advanced persistent threats</h3>
+            <p>
+              For host-based intrusion detection I developed a <strong>process-lineage labeling</strong> method for
+              Windows system-call telemetry: it reconstructs each attack's process tree and labels activity by what
+              actually spawned it rather than by how the command text looks — catching attacks that hide behind ordinary
+              tools like PowerShell and cmd.
+            </p>
+            <p>
+              I built the resulting dataset (4.4M events across 20 APT and ransomware families, with grouped and
+              leave-one-family-out splits) and trained and evaluated NLP + ML detectors, including leave-one-family-out
+              tests that measure how well detection holds up on attack families the model has never seen.
+            </p>
+            <div class="chips">
+              <span>NLP</span><span>Intrusion Detection</span><span>TF-IDF</span><span>scikit-learn</span>
+            </div>
+          </div>
+        </article>
 
-				<h2 class="h2_profile">Skills</h2>
-				<section id="skills">
-					<!-- Programming Languages Section -->
-					<div class="skills-category">
-						<header class="major">
-							<h3>Programming Languages</h3>
-						</header>
-						<div class="skills-container">
-							<div class="skill">
-								<i class="fab fa-python" title="Python" style="color: #306998;"></i>
-								<span>Python</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-hashtag" title="C#" style="color: #9b4f96;"></i>
-								<span>C#</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-database" title="SQL" style="color: #003b57;"></i>
-								<span>SQL</span>
-							</div>
-							<div class="skill">
-								<i class="fab fa-r-project" title="R" style="color: #276dc3;"></i>
-								<span>R</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-square-root-alt" title="MATLAB" style="color: #e34f26;"></i>
-								<span>MATLAB</span>
-							</div>
-							<div class="skill">
-								<i class="fab fa-html5" title="HTML" style="color: #e34f26;"></i>
-								<span>HTML</span>
-							</div>
-							<div class="skill">
-								<i class="fab fa-css3-alt" title="CSS" style="color: #e34f26;"></i>
-								<span>CSS</span>
-							</div>
-							<div class="skill">
-								<i class="fab fa-js-square" title="JavaScript" style="color: #f7df1e;"></i>
-								<span>JavaScript</span>
-							</div>
-						</div>
-					</div>
+        <figure class="field-photo reveal">
+          <img src="assets/img/siam-poster-session.jpg" width="1600" height="902"
+            alt="Aneesh next to his research poster at the SIAM Conference on the Life Sciences" />
+          <figcaption>Presenting the collective cell-invasion work at SIAM LS26, Cleveland, OH (2026).</figcaption>
+        </figure>
+      </div>
+    </section>
 
-					<!-- Tools and Libraries Section -->
-					<div class="skills-category">
-						<header class="major">
-							<h3>Tools and Libraries</h3>
-						</header>
-						<div class="skills-container">
-							<div class="skill">
-								<i class="fab fa-git-alt" title="Git" style="color: #f34f29;"></i>
-								<span>Git</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-book" title="Jupyter" style="color: #f37626;"></i>
-								<span>Jupyter</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-table" title="pandas" style="color: #150458;"></i>
-								<span>pandas</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-code-branch" title="numpy" style="color: #013243;"></i>
-								<span>numpy</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-chart-bar" title="matplotlib" style="color: #11557c;"></i>
-								<span>matplotlib</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-chart-line" title="Tableau" style="color: #e97627;"></i>
-								<span>Tableau</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-chart-area" title="seaborn" style="color: #3776ab;"></i>
-								<span>seaborn</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-file-excel" title="Microsoft Excel" style="color: #217346;"></i>
-								<span>Microsoft Excel</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-chart-pie" title="Power BI" style="color: #f2c811;"></i>
-								<span>Power BI</span>
-							</div>
-							<div class="skill">
-								<i class="fab fa-aws" title="AWS" style="color: #ff9900;"></i>
-								<span>AWS</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-project-diagram" title="PowerApps" style="color: #742774;"></i>
-								<span>PowerApps</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-file-word" title="Microsoft Word" style="color: #2b579a;"></i>
-								<span>Microsoft Word</span>
-							</div>
-						</div>
-					</div>
+    <!-- ===== Publications ===== -->
+    <section class="section" id="publications">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-label">Selected</p>
+          <h2>Publications</h2>
+        </div>
 
-					<!-- Industrial Skills Section -->
-					<div class="skills-category">
-						<header class="major">
-							<h3>Industrial Skills</h3>
-						</header>
-						<div class="skills-container">
-							<div class="skill">
-								<i class="fas fa-project-diagram" title="Agile" style="color: #3e8e41;"></i>
-								<span>Agile</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-chart-line" title="Data Analytics" style="color: #e91e63;"></i>
-								<span>Data Analytics</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-tasks" title="Scrum" style="color: #4caf50;"></i>
-								<span>Scrum</span>
-							</div>
-							<div class="skill">
-								<i class="fas fa-database" title="ETL" style="color: #f4511e;"></i>
-								<span>ETL</span>
-							</div>
-						</div>
-					</div>
-				</section>
+        <ol class="pub-list reveal">
+          <li class="pub">
+            <div class="pub-year">2025</div>
+            <div class="pub-main">
+              <span class="pub-type">Book chapter</span>
+              <h3>Next-Gen 3rd-Party Cybersecurity Risk Management Practices: AI Enablement</h3>
+              <p class="pub-authors"><strong>Aneesh Krishna</strong>, Moksh Gupta</p>
+              <p class="pub-venue"><em>Advancing IT Audits Through Integrative Approaches and Emerging Technologies</em>,
+                IGI Global, 2025.</p>
+              <div class="pub-links">
+                <a href="https://www.igi-global.com/chapter/next-gen-3rd-party-cybersecurity-risk-management-practices/387843"
+                  target="_blank" rel="noopener">Publisher <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              </div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="pub-year">2025</div>
+            <div class="pub-main">
+              <span class="pub-type">Conference paper</span>
+              <h3>AI-Driven Innovations in Third-Party Risk Management</h3>
+              <p class="pub-authors"><strong>Aneesh Krishna</strong>, Moksh Gupta</p>
+              <p class="pub-venue">Proceedings of the 20th Annual Symposium on Information Assurance (Academic track,
+                NYS Cybersecurity Conference), pp. 147–161, Albany, NY, 2025.</p>
+              <div class="pub-links">
+                <a href="https://dx.doi.org/10.2139/ssrn.6767078" target="_blank" rel="noopener">SSRN / DOI <svg
+                    class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              </div>
+            </div>
+          </li>
+        </ol>
 
-				<h2 class="h2_profile">Education</h2>
-				<section id="edcation">
-					<div class="education-item">
-						<div class="education-image">
-							<img src="images/suny_logo.png" alt="University at Buffalo" width="60" height="60">
-						</div>
-						<div class="education-content">
-							<strong>Master of Science in Data Science</strong>, University at Buffalo, The State
-							University
-							of New York
-							<p><em>August 2023 - December 2024</em></p>
-							<p>Buffalo, USA</p>
-						</div>
-					</div>
-					<div class="education-item">
-						<div class="education-image">
-							<img src="images/vtu_logo.png" alt="Visvesvaraya Technological University" width="60"
-								height="60">
-						</div>
-						<div class="education-content">
-							<strong>Bachelor of Engineering in Computer Science</strong>, Visvesvaraya Technological
-							University
-							<p><em>July 2016 - July 2020</em></p>
-							<p>Karnataka, India</p>
-						</div>
-					</div>
-				</section>
+        <div class="section-head sub reveal">
+          <h2 class="h2-sub">Conference Presentations</h2>
+        </div>
+        <ol class="pub-list reveal">
+          <li class="pub">
+            <div class="pub-year">2026</div>
+            <div class="pub-main">
+              <span class="pub-type">Poster</span>
+              <h3>Efficient Parameter Estimation in Agent-Based Models of Collective Cell Invasion via Gaussian Process
+                Surrogates and Bayesian Optimization</h3>
+              <p class="pub-authors"><strong>Aneesh Krishna</strong>, Temitope O. Benson, Khansa Khanam Umer Sultan,
+                Ashlee N. Ford Versypt</p>
+              <p class="pub-venue">SIAM Conference on the Life Sciences (LS26), Cleveland, OH &nbsp;·&nbsp; FOPAM 2026,
+                Decatur, GA &nbsp;·&nbsp; 2026.</p>
+              <div class="pub-links">
+                <a href="assets/docs/SIAM_LS26_poster.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
+                <a href="https://meetings.siam.org/sess/dsp_talk.cfm?p=158086" target="_blank" rel="noopener">SIAM
+                  session <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-				<h2 class="h2_profile">Certifications</h2>
-				<section id="certifications">
-					<ul class="certifications-list">
-						<li class="certification-item">
-							<strong><a
-									href="https://www.coursera.org/account/accomplishments/specialization/X6GLVESTJVJA">Google
-									Data Analytics Specialization</a></strong>
-							<span>Issued Jan 2024</span>
-						</li>
-						<li class="certification-item">
-							<strong><a
-									href="https://www.coursera.org/account/accomplishments/certificate/YJYMLNQ374V5">Python
-									For Everybody</a></strong>
-							<span>Issued Apr 2020</span>
-						</li>
-						<li class="certification-item">
-							<strong><a
-									href="https://www.udemy.com/certificate/UC-eb1cfd7c-6ca6-4035-bab8-915f242a9aae/">Data
-									Science and Business Analytics Course</a></strong>
-							<span>Issued Jun 2020</span>
-						</li>
-					</ul>
-				</section>
+    <!-- ===== Experience ===== -->
+    <section class="section alt" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-label">Where I've worked</p>
+          <h2>Experience</h2>
+        </div>
+        <div class="timeline reveal">
+          <div class="tl-item">
+            <div class="tl-date">Aug 2025 — Present</div>
+            <div class="tl-content">
+              <h3>Graduate Research Assistant</h3>
+              <p class="tl-org">Systems Biomedicine &amp; Pharmaceutics Lab · University at Buffalo</p>
+              <p>Bayesian optimization and Gaussian-process surrogates for calibrating agent-based models of cancer-cell
+                invasion against experimental imaging data.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">Aug 2024 — Jul 2025</div>
+            <div class="tl-content">
+              <h3>Research Assistant</h3>
+              <p class="tl-org">University at Buffalo · PIs: Prof. Shambhu Upadhyaya &amp; Dr. Rudraprasad Baksi</p>
+              <p>Process-lineage labeling and NLP/ML detection for APT and ransomware telemetry; built a 4.4M-event
+                benchmark dataset with leave-one-family-out evaluation.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">Sep 2024 — Dec 2024</div>
+            <div class="tl-content">
+              <h3>Machine Learning Engineer Intern</h3>
+              <p class="tl-org"><a href="https://www.advance2000.com/" target="_blank" rel="noopener">Advance2000</a></p>
+              <p>Built a retrieval-augmented (RAG) helpdesk assistant with Hugging Face embeddings, a Pinecone vector
+                store, and Llama&nbsp;3.1 served through Groq.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">Oct 2020 — Apr 2023</div>
+            <div class="tl-content">
+              <h3>Senior Systems Engineer</h3>
+              <p class="tl-org"><a href="https://www.infosys.com/" target="_blank" rel="noopener">Infosys</a></p>
+              <p>Python ETL pipelines, validation workflows, and SQL data-quality monitoring for an enterprise document
+                migration to Azure — 10M+ files across 90+ sites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===== Education ===== -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-label">Background</p>
+          <h2>Education</h2>
+        </div>
+        <ul class="edu-list reveal">
+          <li class="edu">
+            <img class="edu-logo" src="assets/img/logos/ub.png" alt="University at Buffalo" />
+            <div class="edu-main">
+              <h3>PhD, Computational and Data-Enabled Sciences</h3>
+              <p class="edu-org">University at Buffalo, SUNY · Advisor: Prof. Ashlee N. Ford Versypt</p>
+            </div>
+            <div class="edu-date">2026 — Present</div>
+          </li>
+          <li class="edu">
+            <img class="edu-logo" src="assets/img/logos/ub.png" alt="University at Buffalo" />
+            <div class="edu-main">
+              <h3>MS, Data Science</h3>
+              <p class="edu-org">University at Buffalo, SUNY · GPA 3.63 / 4.0</p>
+            </div>
+            <div class="edu-date">2023 — 2024</div>
+          </li>
+          <li class="edu">
+            <img class="edu-logo" src="assets/img/logos/vtu.png" alt="Visvesvaraya Technological University" />
+            <div class="edu-main">
+              <h3>BE, Computer Science</h3>
+              <p class="edu-org">Visvesvaraya Technological University, India</p>
+            </div>
+            <div class="edu-date">2016 — 2020</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-		</div>
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-inner reveal">
+      <div class="footer-lead">
+        <p class="section-label">Get in touch</p>
+        <h2>Let's connect</h2>
+        <p>I'm always glad to talk about scientific machine learning, Bayesian optimization, computational modeling, and
+          applied AI. Reach out any time.</p>
+        <a class="btn" href="mailto:aneeshkrishna4739@gmail.com">aneeshkrishna4739@gmail.com</a>
+      </div>
+      <div class="footer-side">
+        <div class="footer-social">
+          <a href="https://scholar.google.com/citations?user=PJ4z8S0AAAAJ&hl=en" target="_blank" rel="noopener"
+            aria-label="Google Scholar"><svg class="icon" aria-hidden="true"><use href="#i-scholar" /></svg></a>
+          <a href="https://github.com/aneeshkrishna4739" target="_blank" rel="noopener" aria-label="GitHub"><svg
+              class="icon" aria-hidden="true"><use href="#i-github" /></svg></a>
+          <a href="https://linkedin.com/in/aneesh-krishna" target="_blank" rel="noopener" aria-label="LinkedIn"><svg
+              class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></a>
+          <a href="https://orcid.org/0009-0002-3882-1501" target="_blank" rel="noopener" aria-label="ORCID"><svg
+              class="icon" aria-hidden="true"><use href="#i-orcid" /></svg></a>
+          <a href="mailto:aneeshkrishna4739@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use
+                href="#i-mail" /></svg></a>
+        </div>
+        <p class="footer-meta">Buffalo, NY · Member, SIAM &amp; AIChE</p>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>© <span id="year"></span> Aneesh Krishna</p>
+      <a class="to-top" href="#top" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use
+            href="#i-up" /></svg> Top</a>
+    </div>
+  </footer>
 
-		<!-- Footer -->
-		<footer id="footer">
-
-			<section class="split contact">
-				<section>
-					<h3>Email</h3>
-					<p><a href="mailto:aneeshkr@buffalo.edu">aneeshkr@buffalo.edu</a></p>
-				</section>
-				<section>
-					<h3>Social</h3>
-					<ul class="icons alt">
-						<li><a href="https://github.com/aneeshkrishna4739" class="icon brands alt fa-github"><span
-									class="label">GitHub</span></a></li>
-						<li><a href="https://www.linkedin.com/in/aneesh-krishna"
-								class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://medium.com/@aneeshkrishna4739" class="icon brands alt fa-medium"><span
-									class="label">Medium</span></a></li>
-						<li><a href="https://public.tableau.com/app/profile/aneesh.krishna8620/vizzes"
-								class="icon fas alt fa-chart-bar"><span class="label">Tableau</span></a></li>
-					</ul>
-				</section>
-			</section>
-
-		</footer>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
