@@ -1,0 +1,7 @@
+# Editable source documents — only the exported PDFs should be published
+*.docx
+*.dotx
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
