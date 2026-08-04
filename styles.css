@@ -246,11 +246,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.15; let
 .link-arrow:hover { text-decoration: none; }
 .link-arrow:hover span, .link-arrow:hover { color: var(--accent); }
 
+.photo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 34px; }
 .field-photo {
   margin: 34px 0 0; border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--surface);
 }
+.photo-row .field-photo { margin: 0; display: flex; flex-direction: column; }
 .field-photo img { width: 100%; max-height: 460px; object-fit: cover; object-position: center 35%; }
+.photo-row .field-photo img { aspect-ratio: 4 / 3; height: auto; max-height: none; object-position: center 30%; }
 .field-photo figcaption { padding: 14px 20px; font-size: 14px; color: var(--muted); }
 
 /* ----- Publications ----- */
@@ -360,4 +363,5 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.15; let
   .footer-side { justify-self: start; text-align: left; }
   .footer-social { justify-content: flex-start; }
   .feature-textonly { padding: 24px 22px; }
+  .photo-row { grid-template-columns: 1fr; gap: 18px; }
 }
